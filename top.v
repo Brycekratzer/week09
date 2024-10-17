@@ -1,6 +1,5 @@
 module top (
     input sw[15:8]
-    input sw[15:0]
     input btnC
     output led[15:8]
     
