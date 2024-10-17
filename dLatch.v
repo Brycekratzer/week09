@@ -5,7 +5,7 @@ module dLatch (
 );
     assign Qn = ~Q;    
 
-    always @(D or E) begin
+    always @(D, E) begin
         if (E)         
             Q <= D;   
     end
