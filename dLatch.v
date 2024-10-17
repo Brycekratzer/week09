@@ -1,7 +1,7 @@
 module dLatch (
-    input D, E,       
-    output reg Q,      
-    output Qn          
+    input [7:0]D, E,       
+    output reg [7:0]Q,      
+    output [7:0]Qn          
 );
     assign Qn = ~Q;    
 
