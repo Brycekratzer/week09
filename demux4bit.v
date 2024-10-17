@@ -1,19 +1,24 @@
-module demux4bit(
-    input [3:0] data,
-    input [1:0] sel,
-    output reg [3:0] A,
-    output reg [3:0] B,
-    output reg [3:0] C,
-    output reg [3:0] D
+module demux8bit(
+    input [7:0] data,   
+    input [1:0] sel,    
+    output reg [7:0] A, 
+    output reg [7:0] B, 
+    output reg [7:0] C, 
+    output reg [7:0] D  
 );
 
-    always @(*) begin 
+    always @(*) begin
+        
+        A = 8'b0;
+        B = 8'b0;
+        C = 8'b0;
+        D = 8'b0;
+
         case(sel)
-            2'b00: {D, C, B, A} <= {4'b0, 4'b0, 4'b0, data}; 
-            2'b01: {D, C, B, A} <= {4'b0, 4'b0, data, 4'b0};
-            2'b10: {D, C, B, A} <= {4'b0, data, 4'b0, 4'b0};
-            2'b11: {D, C, B, A} <= {data, 4'b0, 4'b0, 4'b0};
+            2'b00: A = data;  
+            2'b01: B = data;  
+            2'b10: C = data;  
+            2'b11: D = data; 
         endcase
     end
-
 endmodule

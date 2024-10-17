@@ -1,31 +1,31 @@
 module memblock8bit(
-    input [31:0]InputData,
+    input [7:0]A,[7:0]B,[7:0]C,[7:0]D,
     input E,
-    output [31:0]OutputData,
+    output [7:0]OutputData,
 );
 
 dLatch memblock1(
-    .D(InputData[7:0]),
+    .D(A),
     .E(E),
     .Q(OutputData[7:0])
 );
 
 dLatch memblock2(
-    .D(InputData[15:8]),
+    .D(B),
     .E(E),
-    .Q(OutputData[15:8])
+    .Q(OutputData[7:0])
 );
 
 dLatch memblock3(
-    .D(InputData[23:16]),
+    .D(C),
     .E(E),
-    .Q(OutputData[23:16])
+    .Q(OutputData[7:0])
 );
 
 dLatch memblock4(
-    .D(InputData[31:17]),
+    .D(D),
     .E(E),
-    .Q(OutputData[31:17])
+    .Q(OutputData[7:0])
 );
 
 endmodule
