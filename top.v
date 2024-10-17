@@ -30,5 +30,14 @@ module top (
         .C(),
         .D(),
         .E(enabler)
+    };
+
+    mux4bit mux(){
+        .A(),
+        .B(),
+        .C(),
+        .D(),
+        .E(enabler)
+        .Y(led)
     }
 endmodule
