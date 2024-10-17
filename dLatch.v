@@ -1,8 +1,12 @@
 module dLatch (
-    input D, E,
-    output Q,Qn
+    input D, E,       
+    output reg Q,      
+    output Qn          
 );
-    @always(D,E)begin
-        if()
+    assign Qn = ~Q;    
+
+    always @(D or E) begin
+        if (E)         
+            Q <= D;   
     end
 endmodule
