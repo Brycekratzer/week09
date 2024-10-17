@@ -10,7 +10,7 @@ module top (
     wire [7:0] memoryOut;
 
     // Single bit memory  Part 1
-    dLatch dMemorySingle(
+    dLatchSingle dMemorySingle(
         .D(sw[0]),       
         .E(enabler),     
         .Q(led[0]),     
