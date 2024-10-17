@@ -6,8 +6,8 @@ module top (
     wire enabler = btnC;
 
     
-    wire [7:0] dmux_out;  
-    wire [7:0] memoryOut;
+    wire [3:0] dmux_out;  
+    wire [3:0] memoryOut;
 
     // Single bit memory  Part 1
     dLatchSingle dMemorySingle(
