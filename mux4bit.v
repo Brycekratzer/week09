@@ -1,10 +1,10 @@
 module mux4bit (
-    input A,
-    input B,
-    input C,
-    input D,
+    input [7:0]A,
+    input [7:0]B,
+    input [7:0]C,
+    input [7:0]D,
     input [1:0]Sel,
-    output reg Y
+    output reg [7:0]Y
 );
 
     always @(*) begin
