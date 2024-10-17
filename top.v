@@ -7,7 +7,7 @@ module top (
 
     
     wire [7:0] dmux_out;  
-    wire [7:0] memoryOut
+    wire [7:0] memoryOut;
 
     // Single bit memory  Part 1
     dLatch dMemorySingle(
@@ -62,7 +62,7 @@ module top (
         .D(memoryOut[3]),
         .Sel(sw[7:6]),
         .Y(led[15:8])
-    )
+    );
 
 
 

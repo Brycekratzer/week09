@@ -1,4 +1,4 @@
-module mux4to1 (
+module mux4bit (
     input A[7:0],
     input B[7:0],
     input C[7:0],
