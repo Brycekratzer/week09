@@ -1,8 +1,8 @@
 module mux4bit (
-    input A[7:0],
-    input B[7:0],
-    input C[7:0],
-    input D[7:0],
+    input A,
+    input B,
+    input C,
+    input D,
     input [1:0]Sel,
     output reg Y
 );
